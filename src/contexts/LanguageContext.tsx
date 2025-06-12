@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
 import { LanguageOption, LanguageContent } from '../types';
 import { contentData } from '../data/content';
 
@@ -32,15 +38,23 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
 }) => {
-  const [currentLanguage, setCurrentLanguage] = useState(defaultLanguage);
+  const [currentLanguage, setCurrentLanguage] = useState<string>(defaultLanguage);
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('language');
+    if (savedLang && contentData[savedLang]) {
+      setCurrentLanguage(savedLang);
+    }
+  }, []);
 
   const setLanguage = (code: string) => {
     if (contentData[code]) {
       setCurrentLanguage(code);
+      localStorage.setItem('language', code);
     }
   };
 
-  const value = {
+  const value: LanguageContextType = {
     currentLanguage,
     setLanguage,
     t: contentData[currentLanguage],

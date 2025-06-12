@@ -15,7 +15,6 @@ export interface LanguageContent {
     about: string;
     services: string;
     schedule: string;
-    blog: string;
     testimonials: string;
     resources: string;
     contact: string;
@@ -57,6 +56,22 @@ export interface LanguageContent {
     message: string;
     submit: string;
     success: string;
+  };
+  dramaTherapy: {
+    introTitle: string;
+    intro: string;
+    purpose: string;
+    method: string;
+    groupTherapyTitle: string;
+    groupTherapy: string;
+    individualTherapyTitle: string;
+    individualTherapy: string;
+    empowermentNote: string;
+    therapistRoleTitle: string;
+    therapistRole: string;
+    aboutEmilianaTitle: string;
+    aboutEmiliana: string;
+    background: string;
   };
 }
 

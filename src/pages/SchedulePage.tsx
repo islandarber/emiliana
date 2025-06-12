@@ -4,7 +4,7 @@ import Calendar from '../components/schedule/Calendar';
 const SchedulePage: React.FC = () => {
   return (
     <div className="pt-20">
-      <div className="bg-green-800 py-16">
+      <div className="bg-primary-200 py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-serif text-white text-center">
             Schedule

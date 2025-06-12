@@ -89,14 +89,6 @@ const Header: React.FC = () => {
             {t.nav.schedule}
           </Link>
           <Link 
-            to="/blog" 
-            className={`text-sm hover:text-primary-300 transition-all duration-300 ${
-              isActive('/blog') ? 'text-primary-300 font-medium' : 'text-primary-500'
-            }`}
-          >
-            {t.nav.blog}
-          </Link>
-          <Link 
             to="/contact" 
             className={`text-sm hover:text-primary-300 transition-all duration-300 ${
               isActive('/contact') ? 'text-primary-300 font-medium' : 'text-primary-500'

@@ -8,19 +8,19 @@ export default {
       },
       colors: {
         primary: {
-          100: '#f5e6e0',
-          200: '#ebc8bc',
-          300: '#c88866',
-          400: '#c1886b',
-          500: '#cb8885',
+          100: '#F5F3E7', // cream
+          200: '#E3B9A6', // dusty rose
+          300: '#D6A77A', // terracotta
+          400: '#C28B63', // clay
+          500: '#64724D', // earthy green
         },
         secondary: {
-          100: '#e6eded',
-          200: '#ccdada',
-          300: '#2a4f50',
-          400: '#1f3b3c',
-          500: '#152829',
-        }
+          100: '#E6F0F1', // light muted teal
+          200: '#BFD3D6', // soft teal
+          300: '#7C9A9E', // stronger teal
+          400: '#A3988E', // warm gray
+          500: '#8B827B', // darker gray
+        },
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

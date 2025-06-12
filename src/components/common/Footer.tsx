@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const { t } = useLanguage();
   
   return (
-    <footer className="bg-green-900 text-white">
+    <footer className="bg-secondary-300 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -43,9 +43,6 @@ const Footer: React.FC = () => {
               </Link>
               <Link to="/schedule" className="text-green-100 hover:text-white transition">
                 {t.nav.schedule}
-              </Link>
-              <Link to="/blog" className="text-green-100 hover:text-white transition">
-                {t.nav.blog}
               </Link>
               <Link to="/testimonials" className="text-green-100 hover:text-white transition">
                 {t.nav.testimonials}

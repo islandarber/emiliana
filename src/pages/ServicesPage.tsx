@@ -9,7 +9,7 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="pt-20">
-      <div className="bg-green-800 py-16">
+      <div className="bg-primary-200 py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-serif text-white text-center">
             {t.services.title}
@@ -23,7 +23,7 @@ const ServicesPage: React.FC = () => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: false, amount: 0.3 }} // Trigger when 30% of the grid is in view
+              viewport={{ once: false, amount: 0.2 }} // Trigger when 30% of the grid is in view
               transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 gap-8"
             >
