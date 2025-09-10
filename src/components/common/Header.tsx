@@ -46,19 +46,21 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <img src="/logoem.png" alt="imglogo" className='w-[20px] mr-2'/>
-        <Link 
-          to="/"
-          className="font-sans text-xl md:text-2xl font-semibold text-secondary-300 flex items-center mr-4"
-        >
-          Emiliana
-        </Link>
+        <div className='flex items-center gap-2'>
+          <img src="/logoem.png" alt="imglogo" className='w-[40px] mr-2'/>
+          <Link
+            to="/"
+            className="font-sans text-xl md:text-3xl font-semibold text-secondary-300 flex items-center mr-4"
+          >
+            Emiliana
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 text-md px-4 py-2 rounded-md">
           <Link 
             to="/" 
-            className={`text-sm hover:text-primary-300 transition-all duration-300 ${
+            className={`hover:text-primary-300 transition-all duration-300 ${
               isActive('/') ? 'text-primary-300 font-medium font-bold' : 'text-primary-500'
             }`}
           >
@@ -66,7 +68,7 @@ const Header: React.FC = () => {
           </Link>
           <Link 
             to="/about" 
-            className={`text-sm hover:text-primary-300 transition-all duration-300 ${
+            className={`hover:text-primary-400 transition-all duration-300 ${
               isActive('/about') ? 'text-primary-300 font-medium' : 'text-primary-500'
             }`}
           >
@@ -74,7 +76,7 @@ const Header: React.FC = () => {
           </Link>
           <Link 
             to="/services" 
-            className={`text-sm hover:text-primary-300 transition-all duration-300 ${
+            className={`hover:text-primary-300 transition-all duration-300 ${
               isActive('/services') ? 'text-primary-300 font-medium' : 'text-primary-500'
             }`}
           >
@@ -82,7 +84,7 @@ const Header: React.FC = () => {
           </Link>
           <Link 
             to="/schedule" 
-            className={`text-sm hover:text-primary-300 transition-all duration-300 ${
+            className={`hover:text-primary-300 transition-all duration-300 ${
               isActive('/schedule') ? 'text-primary-300 font-medium' : 'text-primary-500'
             }`}
           >
@@ -90,7 +92,7 @@ const Header: React.FC = () => {
           </Link>
           <Link 
             to="/contact" 
-            className={`text-sm hover:text-primary-300 transition-all duration-300 ${
+            className={`hover:text-primary-300 transition-all duration-300 ${
               isActive('/contact') ? 'text-primary-300 font-medium' : 'text-primary-500'
             }`}
           >

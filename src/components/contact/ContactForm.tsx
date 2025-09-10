@@ -123,7 +123,7 @@ const ContactForm: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3 px-4 bg-green-700 text-white rounded-md font-medium transition
+                    className={`w-full py-3 px-4 bg-primary-500 text-white rounded-md font-medium transition
                       ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-green-800'}`}
                   >
                     {isSubmitting ? 'Sending...' : t.contact.submit}
@@ -133,7 +133,7 @@ const ContactForm: React.FC = () => {
             </div>
             
             {/* Contact Information */}
-            <div className="md:w-2/5 bg-green-700 p-8 text-white">
+            <div className="md:w-2/5 bg-primary-200 p-8 text-white">
               <h3 className="text-xl font-medium mb-6">Contact Information</h3>
               
               <div className="space-y-4">
@@ -141,7 +141,7 @@ const ContactForm: React.FC = () => {
                   <Mail className="mr-3 mt-1 flex-shrink-0" size={18} />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:info@emiliana-yoga.com" className="text-green-100 hover:text-white transition">
+                    <a href="mailto:info@emiliana-yoga.com" className="hover:text-white transition">
                       tsoukala.emiliana@gmail.com
                     </a>
                   </div>
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
                   <Phone className="mr-3 mt-1 flex-shrink-0" size={18} />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <a href="tel:+306912345678" className="text-green-100 hover:text-white transition">
+                    <a href="tel:+306912345678" className="hover:text-white transition">
                       +30 695 576 7949
                     </a>
                   </div>
@@ -161,7 +161,7 @@ const ContactForm: React.FC = () => {
                   <MapPin className="mr-3 mt-1 flex-shrink-0" size={18} />
                   <div>
                     <p className="font-medium">Studio Location</p>
-                    <p className="text-green-100">
+                    <p>
                       Spiti Psychotherapeías <br />
                       Alexandrou Diákou 14, <br />
                       Neó Irakleío 141 22, <br />
