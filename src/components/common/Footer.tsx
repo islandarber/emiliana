@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Youtube, Mail, Phone } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -17,14 +17,11 @@ const Footer: React.FC = () => {
               self-discovery, and personal transformation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-green-200 transition">
+              <a href="https://www.instagram.com/emiliana_ts" className="text-white hover:text-green-200 transition">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white hover:text-green-200 transition">
+              <a href="https://www.facebook.com/emily.vinyasayoga" className="text-white hover:text-green-200 transition">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-green-200 transition">
-                <Youtube size={20} />
               </a>
             </div>
           </div>
@@ -62,13 +59,13 @@ const Footer: React.FC = () => {
               <p className="flex items-center text-green-100">
                 <Mail size={18} className="mr-2" />
                 <a href="mailto:info@emiliana-yoga.com" className="hover:text-white transition">
-                  info@emiliana-yoga.com
+                  tsoukala.emiliana@gmail.com
                 </a>
               </p>
               <p className="flex items-center text-green-100">
                 <Phone size={18} className="mr-2" />
                 <a href="tel:+306912345678" className="hover:text-white transition">
-                  +30 691 234 5678
+                  +30 695 576 7949
                 </a>
               </p>
             </div>

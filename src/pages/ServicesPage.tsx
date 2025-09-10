@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServiceCard from '../components/services/ServiceCard';
 import { services } from '../data/services';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -85,9 +86,11 @@ const ServicesPage: React.FC = () => {
               </div>
               
               <div className="mt-6 text-center">
-                <button className="inline-block bg-green-700 text-white px-6 py-3 rounded-md font-medium hover:bg-green-800 transition">
+                <Link 
+                to={"/contact"}
+                className="inline-block bg-green-700 text-white px-6 py-3 rounded-md font-medium hover:bg-green-800 transition">
                   Inquire About Custom Programs
-                </button>
+                </Link>
               </div>
             </div>
           </div>

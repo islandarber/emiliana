@@ -3,53 +3,66 @@ import { Service } from '../types';
 export const services: Service[] = [
   {
     id: 1,
-    type: 'individual',
+    type: 'group',
     title: {
-      en: 'Individual Yoga Sessions',
-      el: 'Ατομικές Συνεδρίες Γιόγκα'
+      en: 'Private and Group Yoga Sessions',
+      el: 'Ιδιωτικά και Ομαδικά Μαθήματα Γιόγκα'
     },
     description: {
-      en: 'Personalized one-on-one sessions tailored to your specific needs, goals, and experience level. Perfect for beginners or those with specific concerns.',
-      el: 'Εξατομικευμένες συνεδρίες προσαρμοσμένες στις συγκεκριμένες ανάγκες, στόχους και επίπεδο εμπειρίας σας. Ιδανικό για αρχάριους ή άτομα με συγκεκριμένες ανησυχίες.'
+      en: 'Tailored for all levels, these sessions emphasize breath, embodied awareness, and nervous system regulation to support balance and inner connection.',
+      el: 'Μαθήματα προσαρμοσμένα σε όλα τα επίπεδα, με έμφαση στην αναπνοή, την ενσώματη επίγνωση και τη ρύθμιση του νευρικού συστήματος, για ισορροπία και σύνδεση με τον εσωτερικό σας εαυτό.'
     },
     image: 'https://images.pexels.com/photos/3822356/pexels-photo-3822356.jpeg'
   },
   {
     id: 2,
-    type: 'group',
+    type: 'individual',
     title: {
-      en: 'Group Drama Therapy',
-      el: 'Ομαδική Δραματοθεραπεία'
+      en: 'Individual Psychotherapy and Dramatherapy',
+      el: 'Ατομική Ψυχοθεραπεία & Δραματοθεραπεία'
     },
     description: {
-      en: 'Collaborative sessions that harness the power of group dynamics to explore emotions, develop social skills, and foster community connection.',
-      el: 'Συνεργατικές συνεδρίες που αξιοποιούν τη δύναμη της ομαδικής δυναμικής για να εξερευνήσουν συναισθήματα, να αναπτύξουν κοινωνικές δεξιότητες και να προωθήσουν την κοινοτική σύνδεση.'
+      en: 'Depth-oriented therapeutic support addressing emotional, relational, and trauma-related challenges through verbal and creative expression.',
+      el: 'Ολιστική υποστήριξη για συναισθηματικές, διαπροσωπικές και τραυματικές προκλήσεις, μέσα από λεκτική επικοινωνία και δημιουργικές τεχνικές.'
     },
     image: 'https://images.pexels.com/photos/8942991/pexels-photo-8942991.jpeg'
   },
   {
     id: 3,
-    type: 'online',
+    type: 'group',
     title: {
-      en: 'Online Yoga & Therapy',
-      el: 'Διαδικτυακή Γιόγκα & Θεραπεία'
+      en: 'Group Therapy & Creative Process Groups',
+      el: 'Ομαδική Θεραπεία & Δημιουργικές Ομάδες Διαδικασίας'
     },
     description: {
-      en: 'Convenient virtual sessions that bring the benefits of yoga and drama therapy to you, wherever you are. Flexible scheduling and personalized attention.',
-      el: 'Βολικές εικονικές συνεδρίες που σας φέρνουν τα οφέλη της γιόγκα και της δραματοθεραπείας, όπου κι αν βρίσκεστε. Ευέλικτος προγραμματισμός και εξατομικευμένη προσοχή.'
+      en: 'Safe, facilitated spaces for shared exploration, expression, and transformation through embodied, relational, and artistic methods.',
+      el: 'Ασφαλείς και καθοδηγούμενοι χώροι για κοινή εξερεύνηση, έκφραση και προσωπική μεταμόρφωση μέσω ενσώματων, διαπροσωπικών και καλλιτεχνικών μεθόδων.'
     },
     image: 'https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg'
   },
   {
     id: 4,
-    type: 'group',
+    type: 'online',
     title: {
-      en: 'Wellness Retreats',
-      el: 'Αποδράσεις Ευεξίας'
+      en: 'Online Psychotherapy Sessions',
+      el: 'Online Ψυχοθεραπεία'
     },
     description: {
-      en: 'Immersive weekend or week-long experiences that combine yoga, drama therapy, nature, and community for profound healing and restoration.',
-      el: 'Βιωματικές εμπειρίες Σαββατοκύριακου ή εβδομάδας που συνδυάζουν γιόγκα, δραματοθεραπεία, φύση και κοινότητα για βαθιά θεραπεία και αποκατάσταση.'
+      en: 'Flexible, confidential support available remotely, maintaining depth and presence wherever you are.',
+      el: 'Ευέλικτη, εμπιστευτική υποστήριξη από απόσταση, διατηρώντας το βάθος και την παρουσία σε κάθε συνεδρία.'
+    },
+    image: 'https://images.pexels.com/photos/4473944/pexels-photo-4473944.jpeg'
+  },
+  {
+    id: 5,
+    type: 'group',
+    title: {
+      en: 'Workshops, Trainings & Retreats',
+      el: 'Εργαστήρια, Εκπαιδεύσεις & Retreats'
+    },
+    description: {
+      en: 'Immersive opportunities for personal growth, professional development, and spiritual inquiry through movement, creativity, and therapeutic practice.',
+      el: 'Εμβληματικές ευκαιρίες για προσωπική ανάπτυξη, επαγγελματική εξέλιξη και πνευματική διερεύνηση μέσα από κίνηση, δημιουργικότητα και θεραπευτική πρακτική.'
     },
     image: 'https://images.pexels.com/photos/4473944/pexels-photo-4473944.jpeg'
   }

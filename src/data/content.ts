@@ -3,8 +3,8 @@ import { LanguageContent } from '../types';
 export const contentData: Record<string, LanguageContent> = {
   en: {
     hero: {
-      title: "Discover Balance Through Movement & Expression",
-      subtitle: "Yoga and Drama Therapy for holistic well-being and self-discovery",
+      title: "The Embodied Self",
+      subtitle: "Somatic and Creative Therapies for Mental Awareness and Emotional Resilience",
       cta: "Book a Session",
       learnMore: "Learn More",
     },
@@ -23,20 +23,20 @@ export const contentData: Record<string, LanguageContent> = {
       rights: "All rights reserved",
     },
     services: {
-      title: "Services",
-      yoga: {
-        title: "Yoga Services",
-        description: "Personalized yoga sessions tailored to your needs, focusing on alignment, breath, and mindfulness."
-      },
-      drama: {
-        title: "Drama Therapy",
-        description: "Expressive arts therapy using dramatic processes to foster growth, healing, and personal transformation."
-      },
-      retreats: {
-        title: "Retreats",
-        description: "Immersive experiences combining yoga, drama therapy, and nature for deep restoration and insight."
-      },
-      cta: "Learn More",
+    title: "Services",
+    yoga: {
+      title: "Private & Group Yoga Sessions",
+      description: "Tailored for all levels, these sessions emphasize breath, embodied awareness, and nervous system regulation to support balance and inner connection."
+    },
+    drama: {
+      title: "Individual Psychotherapy & Dramatherapy",
+      description: "Depth-oriented therapeutic support addressing emotional, relational, and trauma-related challenges through verbal and creative expression."
+    },
+    retreats: {
+      title: "Workshops, Trainings & Retreats",
+      description: "Immersive opportunities for personal growth, professional development, and spiritual inquiry through movement, creativity, and therapeutic practice."
+    },
+    cta: "Learn More"
     },
     about: {
       title: "About Emiliana",
@@ -44,9 +44,9 @@ export const contentData: Record<string, LanguageContent> = {
         "Emiliana is a psychotherapist, drama therapist, and yoga teacher.",
         "She is certified by the European Association of Psychotherapy and a member of the Panhellenic Professional Association of Drama and Play Therapists.",
         "She works with adults in both individual and group settings and facilitates workshops inspired by drama therapy, yoga, and mindfulness. She has collaborated with psychotherapy centers, yoga schools, and seminar spaces in Greece and abroad.",
-        "She is a founding and managing member of the House of Psychotherapy, through which she envisions supporting the therapeutic journey of those who are welcomed there — by offering a safe space and a supportive therapeutic relationship.",
+        "She is a founding and managing member of the House of Psychotherapy, through which she envisions supporting the therapeutic journey of those who are welcomed there, by offering a safe space and a supportive therapeutic relationship.",
         "She has trained with renowned drama therapists such as Sue Jennings, Richard Hougham, Susana Pendzik, Brenda Meldrum, Katerina Robertson, among others. She has led short-term group and individual drama therapy sessions.",
-        "Her focus lies in the connection between body and soul, in the power of the roles and sub-roles we carry in our lives, and she believes that drama therapy can be transformative through this observation process — by discovering new roles, patterns, and the creativity it brings."
+        "Her focus lies in the connection between body and soul, in the power of the roles and sub-roles we carry in our lives, and she believes that drama therapy can be transformative through this observation process, by discovering new roles, patterns, and the creativity it brings."
       ],
       experience: ""
     },
@@ -82,8 +82,8 @@ export const contentData: Record<string, LanguageContent> = {
 
   el: {
     hero: {
-      title: "Ανακαλύψτε την Ισορροπία Μέσω της Κίνησης & της Έκφρασης",
-      subtitle: "Γιόγκα και Δραματοθεραπεία για ολιστική ευεξία και αυτογνωσία",
+      title: "Το Ενσωματωμένο Εγώ",
+      subtitle: "Σωματικές και Δημιουργικές Θεραπείες για Ψυχική Ενημερότητα και Συναισθηματική Ανθεκτικότητα",
       cta: "Κλείστε Συνεδρία",
       learnMore: "Μάθετε Περισσότερα",
     },
@@ -102,21 +102,22 @@ export const contentData: Record<string, LanguageContent> = {
       rights: "Με επιφύλαξη παντός δικαιώματος",
     },
     services: {
-      title: "Υπηρεσίες",
+    title: "Υπηρεσίες",
       yoga: {
-        title: "Υπηρεσίες Γιόγκα",
-        description: "Εξατομικευμένες συνεδρίες γιόγκα προσαρμοσμένες στις ανάγκες σας, με έμφαση στην ευθυγράμμιση, την αναπνοή και την ενσυνειδητότητα."
+        title: "Ιδιωτικά & Ομαδικά Μαθήματα Γιόγκα",
+        description: "Προσαρμοσμένα για όλα τα επίπεδα, τα μαθήματα αυτά δίνουν έμφαση στην αναπνοή, την ενσώματη επίγνωση και τη ρύθμιση του νευρικού συστήματος για ισορροπία και εσωτερική σύνδεση."
       },
       drama: {
-        title: "Δραματοθεραπεία",
-        description: "Θεραπεία εκφραστικών τεχνών με χρήση δραματικών διαδικασιών για την ενίσχυση της ανάπτυξης, της θεραπείας και του προσωπικού μετασχηματισμού."
+        title: "Ατομική Ψυχοθεραπεία & Δραματοθεραπεία",
+        description: "Σε βάθος θεραπευτική υποστήριξη που εστιάζει σε συναισθηματικές, διαπροσωπικές και τραυματικές προκλήσεις μέσα από τον λόγο και τη δημιουργική έκφραση."
       },
       retreats: {
-        title: "Αποδράσεις",
-        description: "Βιωματικές εμπειρίες που συνδυάζουν γιόγκα, δραματοθεραπεία και φύση για βαθιά αποκατάσταση και διορατικότητα."
+        title: "Εργαστήρια, Εκπαιδεύσεις & Retreats",
+        description: "Βιωματικές ευκαιρίες για προσωπική ανάπτυξη, επαγγελματική εξέλιξη και πνευματική αναζήτηση μέσα από την κίνηση, τη δημιουργικότητα και τη θεραπευτική πρακτική."
       },
-      cta: "Μάθετε Περισσότερα",
+      cta: "Μάθετε Περισσότερα"
     },
+
     about: {
       title: "Σχετικά με την Αιμιλιάνα",
       description: [

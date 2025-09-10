@@ -8,14 +8,17 @@ import React, {
 import { LanguageOption, LanguageContent } from '../types';
 import { contentData } from '../data/content';
 
+// ✅ Define allowed languages once
+export type Language = 'en' | 'el';
+
 interface LanguageContextType {
-  currentLanguage: string;
-  setLanguage: (code: string) => void;
+  currentLanguage: Language;
+  setLanguage: (code: Language) => void;
   t: LanguageContent;
   languages: LanguageOption[];
 }
 
-const defaultLanguage = 'en';
+const defaultLanguage: Language = 'en';
 
 const languages: LanguageOption[] = [
   { code: 'en', name: 'English' },
@@ -38,16 +41,16 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
 }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<string>(defaultLanguage);
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLanguage);
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('language');
+    const savedLang = localStorage.getItem('language') as Language | null;
     if (savedLang && contentData[savedLang]) {
       setCurrentLanguage(savedLang);
     }
   }, []);
 
-  const setLanguage = (code: string) => {
+  const setLanguage = (code: Language) => {
     if (contentData[code]) {
       setCurrentLanguage(code);
       localStorage.setItem('language', code);
