@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           <img src="/logoem.png" alt="imglogo" className='w-[40px] mr-2'/>
           <Link
             to="/"
-            className="font-sans text-xl md:text-3xl font-semibold text-secondary-300 flex items-center mr-4"
+            className="font-sans text-xl md:text-3xl font-semibold text-primary-100 flex items-center mr-4"
           >
             Emiliana
           </Link>

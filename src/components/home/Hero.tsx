@@ -18,20 +18,22 @@ const Hero: React.FC = () => {
         playsInline
         style={{
           transform: 'scale(1.1)',
-          transformOrigin: 'center center'
+          transformOrigin: 'center center',
+          minWidth: '100%',
+          minHeight: '100%'
         }}
       />
-      <div className="absolute inset-0 bg-secondary-300/40"></div>
+      <div className="absolute inset-0 bg-secondary-300/50"></div>
     </div>
     
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20">
-        <div className="max-w-2xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 sm:pt-20 lg:pt-24">
+        <div className="max-w-4xl lg:max-w-5xl">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-5xl font-sans text-white leading-tight mb-4"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans text-white leading-tight mb-4 sm:mb-6"
           >
             {t.hero.title}
           </motion.h1>
@@ -39,7 +41,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-primary-100 mb-8"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-100 mb-6 sm:mb-8 lg:mb-10 max-w-3xl"
           >
             {t.hero.subtitle}
           </motion.p>
@@ -47,17 +49,17 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6"
           >
             <Link 
               to="/contact"
-              className="bg-primary-300 hover:bg-primary-400 text-white rounded-md px-6 py-3 font-medium text-center transition-all duration-300 transform hover:scale-105"
+              className="bg-primary-300 hover:bg-primary-400 text-white rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               {t.hero.cta}
             </Link>
             <Link 
               to="/services"
-              className="bg-white hover:bg-primary-100 text-secondary-300 rounded-md px-6 py-3 font-medium text-center transition-all duration-300 transform hover:scale-105"
+              className="bg-white/90 hover:bg-white text-secondary-300 rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
             >
               {t.hero.learnMore}
             </Link>
@@ -66,7 +68,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Decorative Element */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 lg:h-20 bg-gradient-to-t from-white to-transparent z-10"></div>
     </div>
   );
 };
