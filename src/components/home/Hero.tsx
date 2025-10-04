@@ -9,18 +9,21 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen flex items-center">
      <div className="absolute inset-0 overflow-hidden z-0">
-  <iframe
-    className="w-full h-full absolute top-0 left-0 pointer-events-none"
-    src="https://www.youtube.com/embed/osCsxeCy5Q4?autoplay=1&mute=1&controls=0&loop=1&playlist=osCsxeCy5Q4&modestbranding=1&showinfo=0&rel=0"
-    title="YouTube video background"
-    allow="autoplay; fullscreen"
-    allowFullScreen
-    frameBorder="0"
-  ></iframe>
-  <div className="absolute inset-0 bg-secondary-300/40"></div>
-</div>
-
-
+      <video
+        className="w-full h-full object-cover absolute top-0 left-0"
+        src="/video_home.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          transform: 'scale(1.1)',
+          transformOrigin: 'center center'
+        }}
+      />
+      <div className="absolute inset-0 bg-secondary-300/40"></div>
+    </div>
+    
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-2xl">
