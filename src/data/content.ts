@@ -29,7 +29,7 @@ export const contentData: Record<string, LanguageContent> = {
       description: "Tailored for all levels, these sessions emphasize breath, embodied awareness, and nervous system regulation to support balance and inner connection."
     },
     drama: {
-      title: "Individual Psychotherapy & Dramatherapy",
+      title: "Individual & Group Psychotherapy and Dramatherapy",
       description: "Depth-oriented therapeutic support addressing emotional, relational, and trauma-related challenges through verbal and creative expression."
     },
     retreats: {
@@ -108,7 +108,7 @@ export const contentData: Record<string, LanguageContent> = {
         description: "Προσαρμοσμένα για όλα τα επίπεδα, τα μαθήματα αυτά δίνουν έμφαση στην αναπνοή, την ενσώματη επίγνωση και τη ρύθμιση του νευρικού συστήματος για ισορροπία και εσωτερική σύνδεση."
       },
       drama: {
-        title: "Ατομική Ψυχοθεραπεία & Δραματοθεραπεία",
+        title: "Ατομική & Ομαδική Ψυχοθεραπεία και Δραματοθεραπεία",
         description: "Σε βάθος θεραπευτική υποστήριξη που εστιάζει σε συναισθηματικές, διαπροσωπικές και τραυματικές προκλήσεις μέσα από τον λόγο και τη δημιουργική έκφραση."
       },
       retreats: {

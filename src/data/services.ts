@@ -18,8 +18,8 @@ export const services: Service[] = [
     id: 2,
     type: 'individual',
     title: {
-      en: 'Individual Psychotherapy and Dramatherapy',
-      el: 'Ατομική Ψυχοθεραπεία & Δραματοθεραπεία'
+      en: 'Individual & Group Psychotherapy and Dramatherapy',
+      el: 'Ατομική & Ομαδική Ψυχοθεραπεία και Δραματοθεραπεία'
     },
     description: {
       en: 'Depth-oriented therapeutic support addressing emotional, relational, and trauma-related challenges through verbal and creative expression.',

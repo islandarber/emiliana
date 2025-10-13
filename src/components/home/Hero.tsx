@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
     <div className="relative min-h-screen flex items-center">
      <div className="absolute inset-0 overflow-hidden z-0">
       <video
-        className="w-full h-full object-cover absolute top-0 left-0"
+        className="w-full h-full md:object-center absolute top-0 left-0 object-cover object-[60%_center]"
         src="/video_home.mp4"
         autoPlay
         muted
