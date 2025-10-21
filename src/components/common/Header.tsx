@@ -47,10 +47,10 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className='flex items-center gap-2'>
-          <img src="/logoem.png" alt="imglogo" className='w-[40px] mr-2'/>
+          <img src="/logoem3.png" alt="imglogo" className='w-[100px]'/>
           <Link
             to="/"
-            className="font-sans text-2xl md:text-3xl font-semibold text-primary-100 flex items-center mr-4"
+            className="font-sans text-2xl md:text-3xl font-semibold text-black flex items-center mr-4"
           >
             Emiliana
           </Link>
@@ -60,31 +60,36 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex items-center space-x-8 text-md px-4 py-2 rounded-md">
           <Link 
             to="/" 
-            className={`hover:text-primary-300 transition-all duration-300 ${
-              isActive('/') ? 'text-primary-300 font-medium font-bold' : 'text-primary-500'
+              className={`transition-all duration-300 ${
+              isActive('/') 
+              ? 'text-[#8c6e5c] font-bold'       // Active: darker brown + bold
+              : 'text-text hover:text-[#7f5e4a]'  // Normal + hover: slightly darker on hover
             }`}
+
           >
             {t.nav.home}
           </Link>
           <Link 
             to="/about" 
-            className={`hover:text-primary-400 transition-all duration-300 ${
-              isActive('/about') ? 'text-primary-300 font-medium' : 'text-primary-500'
+              className={`transition-all duration-300 ${
+              isActive('/') 
+              ? 'text-blue-500 font-medium'      
+              : 'text-text hover:text-blue-400'
             }`}
           >
             {t.nav.about}
           </Link>
           <Link 
             to="/services" 
-            className={`hover:text-primary-300 transition-all duration-300 ${
-              isActive('/services') ? 'text-primary-300 font-medium' : 'text-primary-500'
+            className={`hover:text-accent transition-all duration-300 ${
+              isActive('/services') ? 'text-blue-500 font-medium' : 'text-text hover:text-blue-400'
             }`}
           >
             {t.nav.services}
           </Link>
           <Link 
             to="/schedule" 
-            className={`hover:text-primary-300 transition-all duration-300 ${
+            className={`hover:text-accent transition-all duration-300 ${
               isActive('/schedule') ? 'text-primary-300 font-medium' : 'text-primary-500'
             }`}
           >
@@ -92,7 +97,7 @@ const Header: React.FC = () => {
           </Link>
           <Link 
             to="/contact" 
-            className={`hover:text-primary-300 transition-all duration-300 ${
+            className={`hover:text-accent transition-all duration-300 ${
               isActive('/contact') ? 'text-primary-300 font-medium' : 'text-primary-500'
             }`}
           >

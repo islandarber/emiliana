@@ -23,11 +23,11 @@ const Hero: React.FC = () => {
           minHeight: '100%'
         }}
       />
-      <div className="absolute inset-0 bg-secondary-300/50"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
     </div>
     
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 sm:pt-20 lg:pt-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 sm:pt-20 lg:pt-24 text-white">
         <div className="max-w-4xl lg:max-w-5xl">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -53,13 +53,13 @@ const Hero: React.FC = () => {
           >
             <Link 
               to="/contact"
-              className="bg-primary-300 hover:bg-primary-400 text-white rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-section hover:bg-section text-white rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               {t.hero.cta}
             </Link>
             <Link 
               to="/services"
-              className="bg-white/90 hover:bg-white text-secondary-300 rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
+              className="bg-background hover:bg-background/100 rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
             >
               {t.hero.learnMore}
             </Link>

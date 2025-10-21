@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cog as Yoga, Drama, Map } from 'lucide-react';
+import { Sprout  as Yoga } from 'lucide-react';
+import { BookHeart  as Drama } from 'lucide-react';
+import { TentTree  as Map } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ServiceHighlights: React.FC = () => {

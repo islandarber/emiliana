@@ -7,20 +7,13 @@ export default {
         'sans': ['Nunito', 'Helvetica', 'Arial', 'Lucida', 'sans-serif'],
       },
       colors: {
-        primary: {
-          100: '#F5F3E7', // cream
-          200: '#E3B9A6', // dusty rose
-          300: '#D6A77A', // terracotta
-          400: '#C28B63', // clay
-          500: '#64724D', // earthy green
-        },
-        secondary: {
-          100: '#E6F0F1', // light muted teal
-          200: '#BFD3D6', // soft teal
-          300: '#7C9A9E', // stronger teal
-          400: '#A3988E', // warm gray
-          500: '#8B827B', // darker gray
-        },
+        background: "#b0a7a2",   // soft taupe
+        section: "#b1a899",      // muted warm beige
+        heading: "#a59888",      // medium warm brown
+        subheading: "#a09581",   // slightly darker taupe
+        text: "#997f6e",         // deep warm brown
+        button: "#a09581",       // primary buttons
+        accent: "#b1a899",       // accents, borders, hover
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
