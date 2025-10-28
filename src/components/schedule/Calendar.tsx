@@ -160,9 +160,12 @@ const Calendar: React.FC<CalendarProps> = ({
   const [selectedSession, setSelectedSession] = useState<CalendarEvent | null>(null);
   const [currentDate, setCurrentDate] = useState(new Date());
   
-  // Fixed: Use only the calendar ID, not the full embed URL
-  const CALENDAR_ID = "85726b8405990137990070417a96e5a388174d61778bc2aad0781b5fb91babed@group.calendar.google.com";
-  const API_KEY = "AIzaSyBmYIK5xDWnVsQYoP7312MTxvJbLDta9f0";
+  // Environment variables from .env file (must use VITE_ prefix for client-side)
+  const CALENDAR_ID = import.meta.env.VITE_CALENDAR_ID;
+  const API_KEY = import.meta.env.VITE_API_KEY;
+
+  console.log("Using Calendar ID:", CALENDAR_ID);
+  console.log("Using API Key:", API_KEY);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -170,28 +173,45 @@ const Calendar: React.FC<CalendarProps> = ({
       const now = new Date().toISOString();
       const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${now}&singleEvents=true&orderBy=startTime&maxResults=10`;
       
+      console.log("📅 Fetching calendar events from:", url);
+      console.log("🔑 Using Calendar ID:", CALENDAR_ID);
+      console.log("🗝️ Using API Key:", API_KEY.substring(0, 10) + "...");
+      
       try {
         const response = await fetch(url);
         
+        console.log("📡 Response status:", response.status);
+        
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          const errorText = await response.text();
+          console.error("❌ API Error Response:", errorText);
+          throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
         }
         
         const data = await response.json();
+        console.log("✅ API Response:", data);
         
         if (data.items) {
-          console.log("Fetched events:", data.items);
+          console.log("📅 Found events:", data.items.length);
           setEvents(data.items);
+        } else {
+          console.log("📅 No events found in response");
+          setEvents([]);
         }
       } catch (error) {
-        console.error("Error fetching calendar events:", error);
+        console.error("❌ Error fetching calendar events:", error);
         setEvents([]);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchEvents();
+    if (CALENDAR_ID && API_KEY) {
+      fetchEvents();
+    } else {
+      console.error("❌ Missing CALENDAR_ID or API_KEY");
+      setLoading(false);
+    }
   }, [CALENDAR_ID, API_KEY]);
 
   const formatDate = (startObj: { dateTime?: string; date?: string }) => {
