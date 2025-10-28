@@ -13,7 +13,8 @@ export default {
         subheading: "#a09581",   // slightly darker taupe
         text: "#997f6e",         // deep warm brown
         button: "#a09581",       // primary buttons
-        accent: "#b1a899",       // accents, borders, hover
+        accent: "#b1a899", 
+        "primary-200": "#b1a899",     
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

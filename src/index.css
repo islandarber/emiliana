@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.fc {
+  --fc-border-color: #f3eae0;
+  --fc-page-bg-color: #faf8f4;
+  --fc-neutral-bg-color: #f9f7f3;
+  --fc-today-bg-color: #f5f3e7;
+  --fc-now-indicator-color: #c28b63;
+  --fc-button-bg-color: #c28b63;
+  --fc-button-border-color: #c28b63;
+  --fc-button-text-color: white;
+  --fc-button-hover-bg-color: #a8774d;
+  --fc-button-hover-border-color: #a8774d;
+  --fc-event-bg-color: #e3b9a6;
+  --fc-event-border-color: #d6a77a;
+  --fc-event-text-color: #4a3f35;
+  --fc-highlight-color: rgba(194, 139, 99, 0.2);
+  font-family: "Inter", "Noto Sans", sans-serif;
+}
