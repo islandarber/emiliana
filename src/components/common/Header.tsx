@@ -15,23 +15,14 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location]);
+  useEffect(() => setIsMenuOpen(false), [location]);
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <motion.header
@@ -39,15 +30,18 @@ const Header: React.FC = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md py-2'
-          : 'bg-transparent py-4'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-white bg-opacity-50 py-2'
       }`}
     >
+      <div
+    className={`absolute left-0 right-0 bottom-0 h-6 pointer-events-none transition-opacity duration-300
+      bg-gradient-to-b from-transparent to-white`}
+    style={{ opacity: isScrolled ? 1.5 : 0.2 }}
+  />
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className='flex items-center gap-2'>
-          <img src="/logoem3.png" alt="imglogo" className='w-[100px]'/>
+          <img src="/logoem3.png" alt="imglogo" className='w-[60px]'/>
           <Link
             to="/"
             className="font-sans text-2xl md:text-3xl font-semibold text-black flex items-center mr-4"
@@ -60,52 +54,58 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex items-center space-x-8 text-md px-4 py-2 rounded-md">
           <Link 
             to="/" 
-              className={`transition-all duration-300 ${
+            className={`transition-all duration-300 ${
               isActive('/') 
-              ? 'text-[#8c6e5c] font-bold'       // Active: darker brown + bold
-              : 'text-text hover:text-[#7f5e4a]'  // Normal + hover: slightly darker on hover
+                ? 'text-primary-200 font-bold'     // Active: darker primary
+                : 'text-text hover:text-primary-100' // Normal + hover
             }`}
-
           >
             {t.nav.home}
           </Link>
           <Link 
             to="/about" 
-              className={`transition-all duration-300 ${
-              isActive('/') 
-              ? 'text-blue-500 font-medium'      
-              : 'text-text hover:text-blue-400'
+            className={`transition-all duration-300 ${
+              isActive('/about') 
+                ? 'text-primary-200 font-bold' 
+                : 'text-text hover:text-primary-100'
             }`}
           >
             {t.nav.about}
           </Link>
           <Link 
             to="/services" 
-            className={`hover:text-accent transition-all duration-300 ${
-              isActive('/services') ? 'text-blue-500 font-medium' : 'text-text hover:text-blue-400'
+            className={`transition-all duration-300 ${
+              isActive('/services') 
+                ? 'text-primary-200 font-bold' 
+                : 'text-text hover:text-primary-100'
             }`}
           >
             {t.nav.services}
           </Link>
           <Link 
             to="/schedule" 
-            className={`hover:text-accent transition-all duration-300 ${
-              isActive('/schedule') ? 'text-primary-300 font-medium' : 'text-primary-500'
+            className={`transition-all duration-300 ${
+              isActive('/schedule') 
+                ? 'text-primary-300 font-bold' 
+                : 'text-text hover:text-primary-100'
             }`}
           >
             {t.nav.schedule}
           </Link>
           <Link 
             to="/contact" 
-            className={`hover:text-accent transition-all duration-300 ${
-              isActive('/contact') ? 'text-primary-300 font-medium' : 'text-primary-500'
+            className={`transition-all duration-300 ${
+              isActive('/contact') 
+                ? 'text-primary-300 font-bold' 
+                : 'text-text hover:text-primary-100'
             }`}
           >
             {t.nav.contact}
           </Link>
           
+          {/* Language Selector */}
           <div className="relative group flex items-center">
-            <button className="flex items-center text-secondary-300 hover:text-primary-300 transition-all duration-300">
+            <button className="flex items-center text-text hover:text-primary-100 transition-all duration-300">
               <Globe size={18} className="mr-1" />
               <span className="text-sm uppercase">{currentLanguage}</span>
             </button>
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
                   className={`block w-full text-left px-4 py-2 text-sm ${
                     currentLanguage === lang.code
                       ? 'bg-primary-100 text-primary-300'
-                      : 'text-secondary-300 hover:bg-gray-50'
+                      : 'text-text hover:bg-gray-50'
                   } transition-all duration-300`}
                 >
                   {lang.name}
@@ -126,9 +126,10 @@ const Header: React.FC = () => {
             </div>
           </div>
 
+          {/* CTA Button */}
           <Link 
-            to="/contact" 
-            className="px-4 py-2 bg-primary-300 text-white rounded-md text-sm font-medium hover:bg-primary-400 transition-all duration-300 transform hover:scale-105"
+            to="/book-a-session" 
+            className="px-4 py-2 bg-button text-white rounded-md text-sm font-medium hover:bg-primary-200 transition-all duration-300 transform hover:scale-105"
           >
             {t.hero.cta}
           </Link>
@@ -138,13 +139,13 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-4 md:hidden">
           <button 
             onClick={() => setLanguage(currentLanguage === 'en' ? 'el' : 'en')}
-            className="p-2 text-secondary-300"
+            className="p-2 text-text hover:text-primary-100 transition-all duration-300"
           >
             <Globe size={20} />
           </button>
           
           <button
-            className="text-secondary-300 focus:outline-none"
+            className="text-text hover:text-primary-100 focus:outline-none transition-all duration-300"
             onClick={toggleMenu}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -161,46 +162,21 @@ const Header: React.FC = () => {
         style={{ top: '60px' }}
       >
         <nav className="flex flex-col h-full pt-6 px-4">
-          <Link
-            to="/"
-            className="py-3 text-lg text-center text-secondary-300 border-b border-gray-100 hover:text-primary-300 transition-all duration-300"
-          >
-            {t.nav.home}
-          </Link>
-          <Link
-            to="/about"
-            className="py-3 text-lg text-center text-secondary-300 border-b border-gray-100 hover:text-primary-300 transition-all duration-300"
-          >
-            {t.nav.about}
-          </Link>
-          <Link
-            to="/services"
-            className="py-3 text-lg text-center text-secondary-300 border-b border-gray-100 hover:text-primary-300 transition-all duration-300"
-          >
-            {t.nav.services}
-          </Link>
-          <Link
-            to="/schedule"
-            className="py-3 text-lg text-center text-secondary-300 border-b border-gray-100 hover:text-primary-300 transition-all duration-300"
-          >
-            {t.nav.schedule}
-          </Link>
-          <Link
-            to="/blog"
-            className="py-3 text-lg text-center text-secondary-300 border-b border-gray-100 hover:text-primary-300 transition-all duration-300"
-          >
-            {t.nav.blog}
-          </Link>
-          <Link
-            to="/contact"
-            className="py-3 text-lg text-center text-secondary-300 border-b border-gray-100 hover:text-primary-300 transition-all duration-300"
-          >
-            {t.nav.contact}
-          </Link>
+          {['/', '/about', '/services', '/schedule', '/blog', '/contact'].map((path, idx) => (
+            <Link
+              key={idx}
+              to={path}
+              className={`py-3 text-lg text-center border-b border-gray-100 transition-all duration-300 ${
+                isActive(path) ? 'text-primary-200 font-bold' : 'text-text hover:text-primary-100'
+              }`}
+            >
+              {t.nav[path === '/' ? 'home' : path.slice(1)]}
+            </Link>
+          ))}
           <div className="mt-auto mb-8">
             <Link
-              to="/contact"
-              className="block w-full py-3 bg-primary-300 text-white rounded-md text-center text-lg font-medium hover:bg-primary-400 transition-all duration-300 transform hover:scale-105"
+              to="/book-a-session"
+              className="block w-full py-3 bg-button text-white rounded-md text-center text-lg font-medium hover:bg-primary-200 transition-all duration-300 transform hover:scale-105"
             >
               {t.hero.cta}
             </Link>

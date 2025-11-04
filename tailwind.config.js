@@ -7,14 +7,11 @@ export default {
         'sans': ['Nunito', 'Helvetica', 'Arial', 'Lucida', 'sans-serif'],
       },
       colors: {
-        background: "#b0a7a2",   // soft taupe
-        section: "#b1a899",      // muted warm beige
-        heading: "#a59888",      // medium warm brown
-        subheading: "#a09581",   // slightly darker taupe
-        text: "#997f6e",         // deep warm brown
-        button: "#a09581",       // primary buttons
-        accent: "#b1a899", 
-        "primary-200": "#b1a899",     
+        text: "#9f8a7dff",         // deep warm brown
+        button: "#2e9277ff",       // primary buttons
+        "primary-100": "#c28b76",
+        "primary-200": "#9A6349",
+        "primary-300": "#0d5618ff",
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

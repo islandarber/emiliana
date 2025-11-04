@@ -52,14 +52,14 @@ const Hero: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 sm:gap-6"
           >
             <Link 
-              to="/contact"
-              className="bg-section hover:bg-section text-white rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              to="/book-a-session"
+              className="bg-button hover:bg-section text-white rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               {t.hero.cta}
             </Link>
             <Link 
               to="/services"
-              className="bg-background hover:bg-background/100 rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
+              className="bg-button hover:bg-background/100 rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
             >
               {t.hero.learnMore}
             </Link>

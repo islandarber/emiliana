@@ -5,13 +5,7 @@ import { blogPosts } from '../data/blog';
 const BlogPage: React.FC = () => {
   return (
     <div className="pt-20">
-      <div className="bg-primary-200 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-serif text-white text-center">
-            Blog
-          </h1>
-        </div>
-      </div>
+
       
       <section className="py-16">
         <div className="container mx-auto px-4">

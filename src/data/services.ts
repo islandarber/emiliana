@@ -12,7 +12,7 @@ export const services: Service[] = [
       en: 'Tailored for all levels, these sessions emphasize breath, embodied awareness, and nervous system regulation to support balance and inner connection.',
       el: 'Μαθήματα προσαρμοσμένα σε όλα τα επίπεδα, με έμφαση στην αναπνοή, την ενσώματη επίγνωση και τη ρύθμιση του νευρικού συστήματος, για ισορροπία και σύνδεση με τον εσωτερικό σας εαυτό.'
     },
-    image: 'https://images.pexels.com/photos/3822356/pexels-photo-3822356.jpeg'
+    image: '/solo1.jpg'
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const services: Service[] = [
       en: 'Depth-oriented therapeutic support addressing emotional, relational, and trauma-related challenges through verbal and creative expression.',
       el: 'Ολιστική υποστήριξη για συναισθηματικές, διαπροσωπικές και τραυματικές προκλήσεις, μέσα από λεκτική επικοινωνία και δημιουργικές τεχνικές.'
     },
-    image: 'https://images.pexels.com/photos/8942991/pexels-photo-8942991.jpeg'
+    image: '/solo3.jpeg'
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export const services: Service[] = [
       en: 'Safe, facilitated spaces for shared exploration, expression, and transformation through embodied, relational, and artistic methods.',
       el: 'Ασφαλείς και καθοδηγούμενοι χώροι για κοινή εξερεύνηση, έκφραση και προσωπική μεταμόρφωση μέσω ενσώματων, διαπροσωπικών και καλλιτεχνικών μεθόδων.'
     },
-    image: 'https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg'
+    image: '/solo3.jpeg'
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ export const services: Service[] = [
       en: 'Flexible, confidential support available remotely, maintaining depth and presence wherever you are.',
       el: 'Ευέλικτη, εμπιστευτική υποστήριξη από απόσταση, διατηρώντας το βάθος και την παρουσία σε κάθε συνεδρία.'
     },
-    image: 'https://images.pexels.com/photos/4473944/pexels-photo-4473944.jpeg'
+    image: 'logoem3.png'
   },
   {
     id: 5,
@@ -64,6 +64,6 @@ export const services: Service[] = [
       en: 'Immersive opportunities for personal growth, professional development, and spiritual inquiry through movement, creativity, and therapeutic practice.',
       el: 'Εμβληματικές ευκαιρίες για προσωπική ανάπτυξη, επαγγελματική εξέλιξη και πνευματική διερεύνηση μέσα από κίνηση, δημιουργικότητα και θεραπευτική πρακτική.'
     },
-    image: 'https://images.pexels.com/photos/4473944/pexels-photo-4473944.jpeg'
+    image: '/solo2.jpg'
   }
 ];

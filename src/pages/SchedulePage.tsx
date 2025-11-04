@@ -1,5 +1,6 @@
 import React from 'react';
 import Calendar from '../components/schedule/Calendar';
+import { Link } from 'react-router-dom';
 
 const SchedulePage: React.FC = () => {
   return (
@@ -23,19 +24,23 @@ const SchedulePage: React.FC = () => {
             </h2>
             
             <p className="text-gray-700 mb-8">
-              To book a class, workshop, or individual session, please contact me directly 
-              or use the online booking system. I recommend booking at least 24 hours in 
-              advance to secure your spot.
+              To book a class please click on the class and follow the instructions. To book a private session, please click the "Book a session" button below to schedule your appointment at a time that works best for you.
             </p>
             
             <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
-              <button className="bg-green-700 text-white px-6 py-3 rounded-md font-medium hover:bg-green-800 transition">
-                Book a Session
-              </button>
-              
-              <button className="bg-white text-green-700 border border-green-700 px-6 py-3 rounded-md font-medium hover:bg-green-50 transition">
+              <Link
+                to="/book-a-session"
+                className="bg-button text-white px-6 py-3 rounded-md font-medium hover:bg-green-800 transition"
+              >
+                Book a session
+              </Link>
+
+              <Link
+                to="/contact"
+                className="bg-white text-green-700 border border-green-700 px-6 py-3 rounded-md font-medium hover:bg-green-50 transition"
+              >
                 Contact Me
-              </button>
+              </Link>
             </div>
             
             <div className="mt-10 p-6 bg-white rounded-lg shadow-sm">

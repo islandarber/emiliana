@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import BookASession from '../contact/BookAsession';
 
 const ContactForm: React.FC = () => {
   const { t } = useLanguage();
@@ -37,8 +36,6 @@ const ContactForm: React.FC = () => {
 
   return (
     <section className="py-16 bg-gray-50">
-
-      <BookASession calendlyUrl="https://calendly.com/tsoukala-emiliana/new-meeting" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">

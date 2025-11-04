@@ -5,13 +5,6 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 
-interface Event {
-  title: string;
-  start: string; // ISO date string
-  end?: string;
-  description?: string;
-}
-
 interface ClassesCalendarProps {
   events: any[]; // we’ll keep it flexible since it comes from FullCalendar
   onEventClick?: (event: any) => void;
@@ -65,7 +58,7 @@ const ClassesCalendar: React.FC<ClassesCalendarProps> = ({
           if (onEventClick) onEventClick(info.event);
         }}
         eventContent={(arg) => (
-          <div className="bg-primary-200 text-primary-800 rounded-md px-2 py-1 text-sm font-medium truncate">
+          <div className="text-primary-800 rounded-md px-2 py-1 text-sm font-medium truncate hover:scale-90 hover:shadow-lg transition-all duration-200 cursor-pointer">
             <div>{arg.event.title}</div>
             <div className="text-[13px] font-semibold opacity-70">
               {arg.timeText}

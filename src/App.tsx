@@ -12,6 +12,7 @@ import SchedulePage from './pages/SchedulePage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import ResourcesPage from './pages/ResourcesPage';
 import ContactPage from './pages/ContactPage';
+import BookAsessionPage from './pages/BookAsessionPage';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -40,6 +41,7 @@ const App: React.FC = () => {
               <Route path="/testimonials" element={<TestimonialsPage />} />
               <Route path="/resources" element={<ResourcesPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/book-a-session" element={<BookAsessionPage />} />
             </Routes>
           </main>
           
