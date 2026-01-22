@@ -15,23 +15,21 @@ const ServiceHighlights: React.FC = () => {
           {t.services.title}
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-darkgreyblueish">
           {/* Yoga Services */}
-          <div className="bg-green-50 rounded-lg p-8 text-center hover:shadow-md transition-shadow duration-300">
-            <div className="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6">
-              <Yoga size={32} className="text-green-700" />
-            </div>
-            <h3 className="text-xl font-medium text-green-900 mb-4">
+          <div className="rounded-lg p-8 text-center hover:shadow-md transition-shadow duration-300">
+            <img src="/solo1.jpg" alt="solo1" className='rounded-md mb-4' />
+            <h3 className="text-xl font-medium mb-4">
               {t.services.yoga.title}
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="mb-6">
               {t.services.yoga.description}
             </p>
             <Link 
               to="/services"
-              className="inline-block text-green-700 font-medium hover:text-green-800 transition"
+              className="inline-block font-medium border px-4 py-2 rounded-lg hover:text-green-800 transition"
             >
-              {t.services.cta} →
+              {t.services.cta}
             </Link>
           </div>
           

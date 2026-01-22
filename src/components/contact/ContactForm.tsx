@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-serif text-center mb-12 text-green-900">
+          <h2 className="text-3xl font-serif text-center mb-12 text-darkgreyblueish">
             {t.contact.title}
           </h2>
           
@@ -124,8 +124,8 @@ const ContactForm: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3 px-4 bg-primary-500 text-white rounded-md font-medium transition
-                      ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-green-800'}`}
+                    className={`w-full py-3 px-4 bg-brownish text-darkgreyblueish rounded-md font-medium transition
+                      ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-darkbrownish'}`}
                   >
                     {isSubmitting ? 'Sending...' : t.contact.submit}
                   </button>
@@ -134,7 +134,7 @@ const ContactForm: React.FC = () => {
             </div>
             
             {/* Contact Information */}
-            <div className="md:w-2/5 bg-primary-200 p-8 text-white">
+            <div className="md:w-2/5 bg-primary-200 p-8 text-darkgreyblueish">
               <h3 className="text-xl font-medium mb-6">Contact Information</h3>
               
               <div className="space-y-4">
@@ -177,7 +177,7 @@ const ContactForm: React.FC = () => {
                 <div className="flex space-x-6">
                   <a 
                   href="https://www.instagram.com/emiliana_ts" 
-                  className="text-white hover:text-green-200 transition"
+                  className="hover:text-green-200 transition"
                   target='_blank'
                   rel='noopener noreferrer'
                   >
@@ -191,7 +191,7 @@ const ContactForm: React.FC = () => {
                     </svg>
                   </a>
                   <a href="https://www.facebook.com/emily.vinyasayoga" 
-                  className="text-white hover:text-green-200 transition"
+                  className="hover:text-green-200 transition"
                   target='_blank'
                   rel='noopener noreferrer'
                   >

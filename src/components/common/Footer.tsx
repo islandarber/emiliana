@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const { t } = useLanguage();
   
   return (
-    <footer className="bg-primary-100 text-white">
+    <footer className="bg-darkbrownish text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
             <div className="mt-6">
               <Link 
                 to="/contact"
-                className="inline-block bg-white text-text px-4 py-2 rounded-md font-medium hover:bg-green-100 transition"
+                className="inline-block bg-white text-text px-4 py-2 rounded-md font-medium hover:bg-beigewhitish transition text-darkgreyblueish"
               >
                 {t.nav.contact}
               </Link>

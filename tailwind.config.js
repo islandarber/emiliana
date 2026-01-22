@@ -7,11 +7,12 @@ export default {
         'sans': ['Nunito', 'Helvetica', 'Arial', 'Lucida', 'sans-serif'],
       },
       colors: {
-        text: "#9f8a7dff",         // deep warm brown
-        button: "#2e9277ff",       // primary buttons
-        "primary-100": "#c28b76",
-        "primary-200": "#9A6349",
-        "primary-300": "#0d5618ff",
+        "darkbrownish": "#BD9E89",
+        "greyblueish": "#CED1D4",
+        "beigewhitish": "#faede0",
+        "darkgreyblueish": "#545454",
+        "greywhitish": "#f1ece5",
+        "brownish": "#e4c9b2"
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

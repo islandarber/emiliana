@@ -11,7 +11,7 @@ const ContactPage: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-serif text-green-900 mb-6 text-center">
+            <h2 className="text-2xl font-serif text-darkgreyblueish mb-6 text-center">
               Find My Studio
             </h2>
             

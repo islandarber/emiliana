@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen flex items-center">
      <div className="absolute inset-0 overflow-hidden z-0">
-      <video
+      {/* <video
         className="w-full h-full md:object-center absolute top-0 left-0 object-cover object-[60%_center]"
         src="/video_home.mp4"
         autoPlay
@@ -22,7 +22,8 @@ const Hero: React.FC = () => {
           minWidth: '100%',
           minHeight: '100%'
         }}
-      />
+      /> */}
+      <img src="/solo1.jpg" alt="soloimg" />
       <div className="absolute inset-0 bg-black/50"></div>
     </div>
     
@@ -53,13 +54,13 @@ const Hero: React.FC = () => {
           >
             <Link 
               to="/book-a-session"
-              className="bg-button hover:bg-section text-white rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-white text-darkgreyblueish rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               {t.hero.cta}
             </Link>
             <Link 
               to="/services"
-              className="bg-button hover:bg-background/100 rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
+              className="bg-white text-darkgreyblueish rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium text-center text-sm sm:text-base lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl backdrop-blur-sm"
             >
               {t.hero.learnMore}
             </Link>

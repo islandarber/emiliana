@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const SchedulePage: React.FC = () => {
   return (
     <div className="pt-20">
-      <div className="bg-primary-200 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-serif text-white text-center">
-            Schedule
-          </h1>
-        </div>
-      </div>
+          <div className="bg-darkgreyblueish py-16">
+            <div className="container mx-auto px-4">
+              <h1 className="text-3xl md:text-4xl font-serif text-white text-center">
+                Schedule
+              </h1>
+            </div>
+          </div>
       
       <Calendar />
       
@@ -30,21 +30,21 @@ const SchedulePage: React.FC = () => {
             <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
               <Link
                 to="/book-a-session"
-                className="bg-button text-white px-6 py-3 rounded-md font-medium hover:bg-green-800 transition"
+                className="bg-brownish text-white px-6 py-3 rounded-md font-medium hover:bg-darkgreyblueish transition"
               >
                 Book a session
               </Link>
 
               <Link
                 to="/contact"
-                className="bg-white text-green-700 border border-green-700 px-6 py-3 rounded-md font-medium hover:bg-green-50 transition"
+                className="bg-white text-darkgreyblueish border border-darkgreyblueish px-6 py-3 rounded-md font-medium hover:bg-brownish transition"
               >
                 Contact Me
               </Link>
             </div>
             
             <div className="mt-10 p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-green-900 mb-3">
+              <h3 className="text-lg font-medium text-darkgreyblueish mb-3">
                 Cancellation Policy
               </h3>
               
